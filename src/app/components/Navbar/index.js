@@ -37,7 +37,12 @@ export default function Navbar() {
           onClick={() => setIsNavOpen(!isNavOpen)}
         />
         {pages.map(({ to, href }) => (
-          <MobileLink href={href} to={to} key={to} closeNav={() => setIsNavOpen(false)} />
+          <MobileLink
+            href={href}
+            to={to}
+            key={to}
+            closeNav={() => setIsNavOpen(false)}
+          />
         ))}
       </div>
     </nav>

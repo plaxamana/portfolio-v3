@@ -1,14 +1,20 @@
-import clsx from "clsx"
+import Link from 'next/link';
+import clsx from 'clsx';
 
-export default function Button({ children, variant = 'secondary' }) {
+export default function Button({ children, variant = 'secondary', href = null }) {
+  const ButtonElement = href ? Link : 'button';
+
   return (
-    <button
+    <ButtonElement
+      href={href}
       className={clsx('px-5 py-4 font-bold w-full rounded-xl', {
-        'text-white bg-[#00479F]': variant === 'primary',
-        'text-[#00479F] bg-white border border-[#00479F]': variant === 'secondary',
+        'flex items-center justify-center': href,
+        'text-white bg-primary': variant === 'primary',
+        'text-primary bg-white border border-primary':
+          variant === 'secondary',
       })}
     >
       {children}
-    </button>
+    </ButtonElement>
   );
 }

@@ -25,8 +25,10 @@ export default function Hero() {
         </h1>
       </div>
       <div className={clsx('flex flex-col gap-2 mb-12')}>
-        <Button variant="primary">Contact Me</Button>
-        <Button>View My Work</Button>
+        <Button variant="primary" href="/contact">
+          Contact Me
+        </Button>
+        <Button href="/work">View My Work</Button>
       </div>
       <Image
         src={HeroImage}

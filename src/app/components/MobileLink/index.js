@@ -1,8 +1,19 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 const MobileLink = ({ href, to, closeNav }) => {
+  const pathname = usePathname();
+
   return (
-    <Link href={href} className="block px-6 py-4 hover:bg-[#3891FF] text-white" onClick={closeNav}>
+    <Link
+      href={href}
+      className={clsx(
+        { 'bg-[#3891FF]': pathname === href },
+        'block px-6 py-4 hover:bg-[#005FD4] text-white'
+      )}
+      onClick={closeNav}
+    >
       {to}
     </Link>
   );
