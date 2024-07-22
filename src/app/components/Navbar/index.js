@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 px-6 bg-white">
+    <nav className="px-6 bg-white">
       <div className="relative flex items-center justify-between py-4">
         <Link href="/" className="font-bold">
           Philip Laxamana

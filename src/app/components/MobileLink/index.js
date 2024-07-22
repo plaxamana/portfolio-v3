@@ -9,8 +9,11 @@ const MobileLink = ({ href, to, closeNav }) => {
     <Link
       href={href}
       className={clsx(
-        { 'bg-[#3891FF]': pathname === href },
-        'block px-6 py-4 hover:bg-[#005FD4] text-white'
+        {
+          'bg-[#3891FF]': pathname === href,
+          'hover:bg-[#005FD4]': pathname !== href,
+        },
+        `block px-6 py-4  text-white`
       )}
       onClick={closeNav}
     >

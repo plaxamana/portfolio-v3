@@ -6,8 +6,8 @@ export default function Page() {
   return (
     <ContainerY>
       <div className={clsx('relative -z-20 flex flex-col items-center mb-12')}>
-        <PageTitle subheading="Don't be scared to send a line below! :)">
-          Say Hello
+        <PageTitle subheading="Client projects and professional work featured below are designed and developed by yours truly.">
+          Work
         </PageTitle>
       </div>
     </ContainerY>

@@ -3,21 +3,24 @@ import clsx from 'clsx';
 
 import Decorator from '@/app/assets/heading_decorator.svg';
 
-export default function PageTitle({ children, className }) {
+export default function PageTitle({ children, className, subheading }) {
   return (
-    <h1
-      className={clsx('font-black text-4xl relative inline-block w-auto', {
-        [className]: className,
-      })}
-    >
-      {children}
-      <Image
-        className={clsx('absolute -bottom-4 left-0')}
-        src={Decorator}
-        width="100%"
-        height={20}
-        alt="Underline"
-      />
-    </h1>
+    <div className={clsx('flex flex-col items-center')}>
+      <h1
+        className={clsx('font-black text-4xl relative inline-block w-auto mb-6', {
+          [className]: className,
+        })}
+      >
+        {children}
+        <Image
+          className={clsx('absolute -bottom-4 left-0')}
+          src={Decorator}
+          width="100%"
+          height={20}
+          alt="Underline"
+        />
+      </h1>
+      <p className={clsx('text-center leading-normal text-balance')}>{subheading}</p>
+    </div>
   );
 }

@@ -35,6 +35,7 @@ export default function Hero() {
         width="100%"
         height={500}
         alt="An illustration of a man developing software on a desktop computer"
+        className={clsx('mx-auto')}
       />
     </div>
   );
