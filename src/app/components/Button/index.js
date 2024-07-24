@@ -6,12 +6,14 @@ export default function Button({
   children,
   variant = 'secondary',
   href = null,
+  type
 }) {
   const ButtonElement = href ? Link : 'button';
 
   return (
     <ButtonElement
       href={href}
+      type={type}
       className={clsx('px-5 py-4 font-bold w-full rounded-xl inline-flex gap-4', {
         'text-white bg-primary justify-center': variant === 'primary',
         'text-primary bg-white border border-primary justify-center': variant === 'secondary',

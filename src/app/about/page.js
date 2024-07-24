@@ -35,7 +35,7 @@ export default function Page() {
     <ContainerY className={clsx('-z-10')}>
       <div className={clsx('relative -z-10')}>
         <div className={clsx('flex justify-center mb-12')}>
-          <PageTitle>About</PageTitle>
+          <PageTitle title="About" />
         </div>
         {/** Profile Img */}
         <div className={clsx('flex justify-center mb-16')}>

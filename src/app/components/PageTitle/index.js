@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import Decorator from '@/app/assets/heading_decorator.svg';
 
-export default function PageTitle({ children, className, subheading }) {
+export default function PageTitle({ title, className, subheading }) {
   return (
     <div className={clsx('flex flex-col items-center')}>
       <h1
@@ -11,7 +11,7 @@ export default function PageTitle({ children, className, subheading }) {
           [className]: className,
         })}
       >
-        {children}
+        {title}
         <Image
           className={clsx('absolute -bottom-4 left-0')}
           src={Decorator}

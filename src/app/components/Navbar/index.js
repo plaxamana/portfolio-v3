@@ -29,7 +29,7 @@ export default function Navbar() {
             'translate-x-0': isNavOpen,
             'translate-x-full': !isNavOpen,
           },
-          'transform duration-300 fixed z-20 top-0 right-0 min-h-screen pt-4 w-64 bg-[#00479F] text-right'
+          'transform duration-300 fixed z-10 top-0 right-0 min-h-screen pt-4 w-64 bg-[#00479F] text-right'
         )}
       >
         <X

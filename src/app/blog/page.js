@@ -6,9 +6,7 @@ export default function Page() {
   return (
     <ContainerY>
       <div className={clsx('relative -z-20 flex flex-col items-center mb-12')}>
-        <PageTitle subheading="Thoughts and collection of ideas published to the internet.">
-          The Blog
-        </PageTitle>
+        <PageTitle title="The Blog" subheading="Thoughts and collection of ideas published to the internet." />
       </div>
     </ContainerY>
   );
