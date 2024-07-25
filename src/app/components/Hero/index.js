@@ -7,10 +7,10 @@ import HeroImage from '@/app/assets/hero.svg';
 
 export default function Hero() {
   return (
-    <div className={clsx('py-32')} id="hero-home">
+    <div className={clsx('pt-36 pb-24')} id="hero-home">
       <div className={clsx('mb-12')}>
         <span className={clsx('text-lg')}>Hi, I&apos;m Philip</span>
-        <h1 className={clsx('text-3xl font-black text-balance')}>
+        <h1 className={clsx('text-4xl font-black text-balance')}>
           I create beautiful websites that make the internet look{' '}
           <span className={clsx('relative inline-block w-28 -z-10')}>
             great

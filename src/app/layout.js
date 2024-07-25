@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import clsx from 'clsx';
 
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
@@ -18,11 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="sticky top-0">
+      <body className={clsx(inter.className)}>
+        <header className="sticky top-0 z-50 max-w-screen-xl mx-auto">
           <Navbar />
         </header>
-        {children}
+        <div className={clsx('max-w-screen-xl mx-auto')}>{children}</div>
         <Footer />
       </body>
     </html>

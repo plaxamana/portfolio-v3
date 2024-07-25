@@ -32,8 +32,8 @@ const DetailsBlock = ({ title, description, year, isCurrent }) => {
 
 export default function Page() {
   return (
-    <ContainerY className={clsx('-z-10')}>
-      <div className={clsx('relative -z-10')}>
+    <ContainerY>
+      <>
         <div className={clsx('flex justify-center mb-12')}>
           <PageTitle title="About" />
         </div>
@@ -70,7 +70,7 @@ export default function Page() {
             />
           </div>
         </div>
-      </div>
+      </>
       <div className={clsx('space-y-4 mb-6')}>
         <h2 className={clsx('font-bold text-2xl text-pretty')}>
           I&apos;m Philip Laxamana. Toronto is my hometown where I design things
