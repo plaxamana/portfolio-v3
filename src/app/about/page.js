@@ -34,9 +34,9 @@ const DetailsBlock = ({ title, description, year, isCurrent }) => {
 
 export default function Page() {
   return (
-    <ContainerY className={clsx('md:py-32')}>
-      <div className={clsx('flex justify-center mb-12 lg:mb-24')}>
-        <PageTitle title="About" />
+    <ContainerY>
+      <div className={clsx('flex justify-center mb-12 lg:py-12')}>
+        <PageTitle title="About" imgClassName={clsx('md:-bottom-5')} />
       </div>
       <div
         className={clsx(

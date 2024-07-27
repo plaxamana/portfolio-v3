@@ -9,7 +9,10 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-[#E3EFFE] rounded-lg py-6 px-4 flex flex-col gap-4">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-[#E3EFFE] rounded-lg py-6 px-4 flex flex-col gap-4 md:max-w-2xl mx-auto sm:p-8 w-full"
+    >
       <FormField as="input" name="name" label="Name" />
       <FormField as="email" name="email" label="Email Address" />
       <FormField as="textarea" name="message" label="Message" />
