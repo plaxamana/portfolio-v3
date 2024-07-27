@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className={clsx('px-6 bg-white')}>
+    <nav className={clsx('px-6 bg-white sm:px-8 md:px-12')}>
       <div className={clsx('relative flex items-center justify-between py-4')}>
         <Link href="/" className="font-bold">
           Philip Laxamana
@@ -25,9 +25,13 @@ export default function Navbar() {
         />
         <div className={clsx('text-black hidden sm:flex sm:gap-10')}>
           {pages.map(({ href, to }) => (
-            <Link className={clsx('hover:text-[#005FD4]', {
-              'text-primary font-bold': pathname === href
-            })} key={to} href={href}>
+            <Link
+              className={clsx('hover:text-[#005FD4]', {
+                'text-primary font-bold': pathname === href,
+              })}
+              key={to}
+              href={href}
+            >
               {to}
             </Link>
           ))}
