@@ -15,9 +15,9 @@ export default function Home() {
       <Hero />
       <ContainerY className={clsx('relative')}>
         <Image
-          className={clsx('hidden top-0 -left-80 absolute md:block -z-10')}
+          className={clsx('hidden top-0 -left-64 absolute md:block -z-10')}
           src={Blob}
-          width={460}
+          width={360}
           height={355}
           alt=""
         />
