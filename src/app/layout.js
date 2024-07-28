@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <header className="sticky top-0 z-50 max-w-screen-xl mx-auto">
           <Navbar />
         </header>
-        <div className={clsx('max-w-screen-xl mx-auto')}>{children}</div>
+        {children}
         <Footer />
       </body>
     </html>

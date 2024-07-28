@@ -12,7 +12,7 @@ export default function PageTitle({
 }) {
   return (
     <div
-      className={clsx('flex flex-col items-center', {
+      className={clsx('flex flex-col items-center sm:py-12', {
         [containerClassName]: containerClassName,
       })}
     >
@@ -35,9 +35,11 @@ export default function PageTitle({
           alt="Underline"
         />
       </h1>
-      <p className={clsx('text-center leading-normal text-balance')}>
-        {subheading}
-      </p>
+      {subheading && (
+        <p className={clsx('text-center leading-normal text-balance')}>
+          {subheading}
+        </p>
+      )}
     </div>
   );
 }

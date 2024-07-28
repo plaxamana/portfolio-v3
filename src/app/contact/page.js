@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import { ContainerY } from '@/app/components/Container';
+import { Section } from '@/app/components/Container';
 import PageTitle from '@/app/components/PageTitle';
 import ContactForm from '@/app/components/ContactForm';
 
 export default function Page() {
   return (
-    <ContainerY className={clsx('min-h-[90vh]')}>
+    <Section className={clsx('min-h-[90vh]')}>
       <div
         className={clsx(
           'relative -z-10 flex flex-col items-center mb-12 md:py-12'
@@ -20,6 +20,6 @@ export default function Page() {
       <div className={clsx('flex flex-col gap-y-3')}>
         <ContactForm />
       </div>
-    </ContainerY>
+    </Section>
   );
 }

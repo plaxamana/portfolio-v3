@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import clsx from 'clsx';
 import PageTitle from '@/app/components/PageTitle';
-import { ContainerY } from '@/app/components/Container';
+import { Section } from '@/app/components/Container';
 import Button from '@/app/components/Button';
 
 import { socials, experience } from '@/app/globalvars';
@@ -34,11 +34,9 @@ const DetailsBlock = ({ title, description, year, isCurrent }) => {
 
 export default function Page() {
   return (
-    <ContainerY>
-      <div className={clsx('flex justify-center mb-12 lg:py-12')}>
-        <PageTitle title="About" imgClassName={clsx('md:-bottom-5')} />
-      </div>
-      <div
+    <Section>
+      <PageTitle title="About" imgClassName={clsx('md:-bottom-5')} />
+      <Section
         className={clsx(
           'lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_224px] lg:gap-x-20'
         )}
@@ -170,8 +168,8 @@ export default function Page() {
             );
           })}
         </div>
-      </div>
-      <div className={clsx('relative lg:grid lg:grid-cols-2 lg:gap-x-16 lg:py-16')}>
+      </Section>
+      <Section className={clsx('relative lg:grid lg:grid-cols-2 lg:gap-x-16')}>
         <div className={clsx('absolute w-max -top-24 right-0')}>
           <Image
             className={clsx('w-auto')}
@@ -211,7 +209,7 @@ export default function Page() {
             year="2018"
           />
         </div>
-      </div>
-    </ContainerY>
+      </Section>
+    </Section>
   );
 }

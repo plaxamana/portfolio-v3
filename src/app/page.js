@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import clsx from 'clsx';
-import Container, { ContainerY } from '@/app/components/Container';
+import Container, { Section } from '@/app/components/Container';
 import Hero from '@/app/components/Hero';
 import Card from '@/app/components/Card';
 import Button from '@/app/components/Button';
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Container>
       <Hero />
-      <ContainerY className={clsx('relative')}>
+      <Section className={clsx('relative')}>
         <Image
           className={clsx('hidden top-0 -left-64 absolute md:block -z-10')}
           src={Blob}
@@ -39,9 +39,11 @@ export default function Home() {
             />
           ))}
         </div>
-      </ContainerY>
-      <ContainerY
-        className={clsx('grid gap-y-4 lg:mb-24 lg:grid-cols-3 lg:gap-0 lg:items-start lg:grid-rows-4')}
+      </Section>
+      <Section
+        className={clsx(
+          'grid gap-y-4 lg:mb-24 lg:grid-cols-3 lg:gap-0 lg:items-start lg:grid-rows-4'
+        )}
       >
         <h2 className={clsx('font-bold text-2xl mb-4 lg:mb-0 lg:self-center')}>
           Want to get in touch?
@@ -49,7 +51,9 @@ export default function Home() {
         <Button
           variant="primary"
           href="/contact"
-          className={clsx('row-start-3 md:row-start-2 md:max-w-40 lg:row-start-2')}
+          className={clsx(
+            'row-start-3 md:row-start-2 md:max-w-40 lg:row-start-2'
+          )}
         >
           Say Hello!
         </Button>
@@ -60,7 +64,7 @@ export default function Home() {
           alt="Cat holding the phone with the caller saying 'hello'"
           className={clsx('lg:row-span-4 lg:col-span-2')}
         />
-      </ContainerY>
+      </Section>
     </Container>
   );
 }

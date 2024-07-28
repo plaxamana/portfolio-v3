@@ -16,7 +16,7 @@ export default function Button({
       href={href}
       type={type}
       className={clsx(
-        'px-5 py-4 font-bold w-full rounded-xl inline-flex gap-4',
+        'px-5 py-3 font-bold w-full rounded-xl inline-flex gap-4',
         {
           [className]: className,
           'text-white bg-primary justify-center': variant === 'primary',
