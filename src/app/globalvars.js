@@ -31,7 +31,7 @@ export const skillsArr = [
   },
   {
     id: 2,
-    skill: 'Responsive Web Design',
+    skill: 'Copywriting',
     description:
       "Need your website to speak human? I've got you covered. I'll help your visitors find what they need and understand what you're all about—minus the jargon overload.",
     icon: PencilIcon,
