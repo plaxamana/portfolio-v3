@@ -21,7 +21,7 @@ export default function PageTitle({
           'font-black text-4xl relative inline-block w-auto mb-6 md:text-6xl',
           {
             [className]: className,
-          }
+          },
         )}
       >
         {title}
@@ -36,7 +36,11 @@ export default function PageTitle({
         />
       </h1>
       {subheading && (
-        <p className={clsx('text-center leading-normal text-balance')}>
+        <p
+          className={clsx(
+            'text-center leading-normal text-balance max-w-prose',
+          )}
+        >
           {subheading}
         </p>
       )}

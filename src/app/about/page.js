@@ -38,7 +38,7 @@ export default function Page() {
       <PageTitle title="About" imgClassName={clsx('md:-bottom-5')} />
       <Section
         className={clsx(
-          'lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_224px] lg:gap-x-20'
+          'lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_224px] lg:gap-x-20',
         )}
       >
         {/** Profile Img */}
@@ -67,7 +67,7 @@ export default function Page() {
             />
             <Image
               className={clsx(
-                'absolute top-10 right-0 mr-16 z-10 md:top-20 md:right-11 lg:right-24 lg:top-32'
+                'absolute top-10 right-0 mr-16 z-10 md:top-20 md:right-11 lg:right-24 lg:top-32',
               )}
               src={Crown}
               width={37}
@@ -87,7 +87,7 @@ export default function Page() {
               height={274}
               alt="Portrait shot of Philip standing cross-armed in front of the Toronto skyline"
               className={clsx(
-                'hidden rounded-3xl origin-center rotate-6 md:block lg:hidden'
+                'hidden rounded-3xl origin-center rotate-6 md:block lg:hidden',
               )}
             />
             <Image
@@ -96,7 +96,7 @@ export default function Page() {
               height={400}
               alt="Portrait shot of Philip standing cross-armed in front of the Toronto skyline"
               className={clsx(
-                'hidden rounded-3xl origin-center rotate-6 lg:block'
+                'hidden rounded-3xl origin-center rotate-6 lg:block',
               )}
             />
             <Image
@@ -108,7 +108,7 @@ export default function Page() {
             />
             <Image
               className={clsx(
-                'hidden absolute bottom-0 -left-6 lg:left-0 md:block lg:hidden'
+                'hidden absolute bottom-0 -left-6 lg:left-0 md:block lg:hidden',
               )}
               src={TicksLeft}
               width={100}
@@ -126,7 +126,7 @@ export default function Page() {
         </div>
         <div
           className={clsx(
-            'space-y-4 mb-6 lg:col-start-1 lg:row-start-1 lg:row-span-2 leading-relaxed'
+            'space-y-4 mb-6 lg:col-start-1 lg:row-start-1 lg:row-span-2 leading-relaxed',
           )}
         >
           <h2 className={clsx('font-bold text-2xl text-pretty')}>

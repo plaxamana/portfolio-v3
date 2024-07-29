@@ -6,7 +6,7 @@ export default function Card({ icon, skill, description, className }) {
     <div
       className={clsx(
         'relative flex flex-col gap-4 bg-gray-100 px-6 py-8 rounded-2xl',
-        { [className]: className }
+        { [className]: className },
       )}
     >
       <Image

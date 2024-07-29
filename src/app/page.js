@@ -24,7 +24,7 @@ export default function Home() {
         <h2 className={clsx('font-bold text-2xl mb-4')}>Things that I do</h2>
         <div
           className={clsx(
-            'py-16 grid gap-y-16 md:grid-cols-4 md:gap-x-8 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-1'
+            'py-16 grid gap-y-16 md:grid-cols-4 md:gap-x-8 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-1',
           )}
         >
           {skillsArr.map(({ id, skill, description, icon }, index) => (
@@ -42,7 +42,7 @@ export default function Home() {
       </Section>
       <Section
         className={clsx(
-          'grid gap-y-4 lg:mb-24 lg:grid-cols-3 lg:gap-0 lg:items-start lg:grid-rows-4'
+          'grid gap-y-4 lg:mb-24 lg:grid-cols-3 lg:gap-0 lg:items-start lg:grid-rows-4',
         )}
       >
         <h2 className={clsx('font-bold text-2xl mb-4 lg:mb-0 lg:self-center')}>
@@ -52,7 +52,7 @@ export default function Home() {
           variant="primary"
           href="/contact"
           className={clsx(
-            'row-start-3 md:row-start-2 md:max-w-40 lg:row-start-2'
+            'row-start-3 md:row-start-2 md:max-w-40 lg:row-start-2',
           )}
         >
           Say Hello!

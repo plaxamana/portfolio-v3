@@ -20,9 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={clsx(inter.className)}>
-        <header className="sticky top-0 z-50 max-w-screen-xl mx-auto">
-          <Navbar />
-        </header>
+        <Navbar />
         {children}
         <Footer />
       </body>

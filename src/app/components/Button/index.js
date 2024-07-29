@@ -24,7 +24,7 @@ export default function Button({
             variant === 'secondary',
           'text-black border-none py-2 !px-0 font-normal':
             variant === 'iconButton',
-        }
+        },
       )}
     >
       {leftIcon} {children}

@@ -5,7 +5,11 @@ import JFCM from '@/app/assets/jfcm-home.png';
 
 export default function WorkPiece({ title, desc, hrefSite }) {
   return (
-    <div className={clsx('grid gap-y-4 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-28 lg:items-center')}>
+    <div
+      className={clsx(
+        'grid gap-y-4 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-28 lg:items-center',
+      )}
+    >
       <div className={clsx('rounded-2xl shadow-lg overflow-hidden')}>
         <Image
           src={JFCM}

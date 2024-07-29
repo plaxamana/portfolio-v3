@@ -1,13 +1,24 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { socials } from '@/app/globalvars';
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname.includes('/studio')) {
+    return <></>;
+  }
+
   return (
-    <footer className={clsx(' bg-primary text-white py-4 px-6 mt-auto lg:py-8')}>
+    <footer
+      className={clsx(' bg-primary text-white py-4 px-6 mt-auto lg:py-8')}
+    >
       <div
         className={clsx(
-          'max-w-screen-xl mx-auto flex flex-col gap-2 text-center text-pretty sm:flex-row sm:justify-between'
+          'max-w-screen-xl mx-auto flex flex-col gap-2 text-center text-pretty sm:flex-row sm:justify-between',
         )}
       >
         <div>Site designed and developed by Philip Laxamana</div>
