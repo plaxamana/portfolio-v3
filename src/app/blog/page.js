@@ -3,9 +3,14 @@ import { Section } from '@/app/components/Container';
 import PageTitle from '@/app/components/PageTitle';
 import BlogPost from '@/app/components/BlogPost';
 
-export default function Page() {
+import { sanityFetch } from '@/sanity/lib/client';
+import { POSTS_QUERY } from '@/sanity/lib/queries';
+
+export default async function Page() {
+  const posts = await sanityFetch({ query: POSTS_QUERY });
+
   return (
-    <Section>
+    <Section className={clsx('min-h-screen')}>
       <PageTitle
         title="The Blog"
         subheading="Thoughts and collection of ideas published to the internet."
@@ -14,27 +19,14 @@ export default function Page() {
       />
 
       <Section className={clsx('flex flex-col gap-y-10 items-center')}>
-        <BlogPost
-          date="July 3, 2024"
-          title="How to Design a Portfolio Website"
-          short="Lorem ipsum dolor sit amet consectetur. Sed morbi eleifend tincidunt tincidunt vestibulum interdum sit. 
-          Potenti egestas dignissim libero hac senectus commodo dignissim sed vestibulum. 
-          Purus suspendisse feugiat elit nibh pharetra. Ut magna nunc erat sed."
-        />
-        <BlogPost
-          date="July 3, 2024"
-          title="How to Design a Portfolio Website"
-          short="Lorem ipsum dolor sit amet consectetur. Sed morbi eleifend tincidunt tincidunt vestibulum interdum sit. 
-          Potenti egestas dignissim libero hac senectus commodo dignissim sed vestibulum. 
-          Purus suspendisse feugiat elit nibh pharetra. Ut magna nunc erat sed."
-        />
-        <BlogPost
-          date="July 3, 2024"
-          title="How to Design a Portfolio Website"
-          short="Lorem ipsum dolor sit amet consectetur. Sed morbi eleifend tincidunt tincidunt vestibulum interdum sit. 
-          Potenti egestas dignissim libero hac senectus commodo dignissim sed vestibulum. 
-          Purus suspendisse feugiat elit nibh pharetra. Ut magna nunc erat sed."
-        />
+        {posts &&
+          posts.map((post) => (
+            <BlogPost
+              key={post._id}
+              title={post.title}
+              href={`blog/${post.slug.current}`}
+            />
+          ))}
       </Section>
     </Section>
   );
