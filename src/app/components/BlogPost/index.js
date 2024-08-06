@@ -9,9 +9,9 @@ export default function BlogPost({ date, title, short, href }) {
         <div className={clsx('text-xs')}>{date}</div>
       </div>
       <p>{short}</p>
-      <a className={clsx('font-bold text-primary')} href={href}>
+      <Link className={clsx('font-bold text-primary')} href={href}>
         Read Article
-      </a>
+      </Link>
     </div>
   );
 }
