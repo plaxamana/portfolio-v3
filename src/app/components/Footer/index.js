@@ -25,7 +25,7 @@ export default function Footer() {
         <div className={clsx('flex gap-4 justify-center')}>
           {socials.map((social) => {
             return (
-              <Link key={social.name} href={social.href}>
+              <Link key={social.name} href={social.href} aria-label={social.name}>
                 {social.icon}
               </Link>
             );

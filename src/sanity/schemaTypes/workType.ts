@@ -18,7 +18,26 @@ export const workType = defineType({
       },
     }),
     defineField({
+      name: 'tags',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'tag' } }],
+    }),
+    defineField({
       name: 'image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text',
+        },
+      ],
+    }),
+    defineField({
+      name: 'project_image',
       type: 'image',
       options: {
         hotspot: true,

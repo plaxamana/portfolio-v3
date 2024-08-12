@@ -10,7 +10,7 @@ const MobileLink = ({ href, to, closeNav }) => {
       href={href}
       className={clsx(
         {
-          'bg-[#3891FF]': pathname === href,
+          'bg-blue-600': pathname === href,
           'hover:bg-[#005FD4]': pathname !== href,
         },
         `block px-6 py-4  text-white`,

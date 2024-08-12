@@ -3,7 +3,13 @@ import { Section } from '@/app/components/Container';
 import PageTitle from '@/app/components/PageTitle';
 import WorkPiece from '@/app/components/WorkPiece';
 
-export default function Page() {
+import { sanityFetch } from '@/sanity/lib/client';
+import { WORKS_QUERY } from '@/sanity/lib/queries';
+
+export default async function Page() {
+  const works = await sanityFetch({ query: WORKS_QUERY });
+  console.log({ works });
+
   return (
     <Section>
       <PageTitle
@@ -15,21 +21,16 @@ export default function Page() {
       <Section
         className={clsx('flex flex-col gap-y-6 items-center sm:gap-y-10')}
       >
-        <WorkPiece
-          title="Jesus First Christian Ministries"
-          desc="A church website for Jesus First Christian Ministries (JFCM) Mississauga.  This acts as a central hub to find more information about the church such as service time, location, beliefs and contact information."
-          hrefSite="#"
-        />
-        <WorkPiece
-          title="Jesus First Christian Ministries"
-          desc="A church website for Jesus First Christian Ministries (JFCM) Mississauga.  This acts as a central hub to find more information about the church such as service time, location, beliefs and contact information."
-          hrefSite="#"
-        />
-        <WorkPiece
-          title="Jesus First Christian Ministries"
-          desc="A church website for Jesus First Christian Ministries (JFCM) Mississauga.  This acts as a central hub to find more information about the church such as service time, location, beliefs and contact information."
-          hrefSite="#"
-        />
+        {works.map((work) => (
+          <WorkPiece
+            key={work._id}
+            title={work.name}
+            desc={work.short_description}
+            hrefSite={work.href}
+            slug={work.slug.current}
+            img={work.image}
+          />
+        ))}
       </Section>
     </Section>
   );

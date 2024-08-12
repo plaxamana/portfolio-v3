@@ -38,7 +38,7 @@ export default function Page() {
       <PageTitle title="About" imgClassName={clsx('md:-bottom-5')} />
       <Section
         className={clsx(
-          'lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_224px] lg:gap-x-20',
+          'lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_160px] lg:gap-x-20',
         )}
       >
         {/** Profile Img */}
@@ -144,17 +144,24 @@ export default function Page() {
             aesthetic!
           </p>
           <p>
-            Currently, I work with React building out component libraries. I’ve
-            also had past experience building out features as well. Other things
-            I’ve worked with is node/express, MongoDB and SQL.
+            Currently, I am supporting front-end devs at my company by building
+            and maintaining a React component library. I’ve also had past
+            experience building out features as well. Other things I’ve worked
+            with is node/express, MongoDB and SQL.
           </p>
           <p>
-            Outside of work, I sometimes like to do more learning related to
-            design and code. Other times, I&apos;m either working out, catching
-            up on a kdrama or spending time with my wife :)
+            On the side, I am working on{' '}
+            <a
+              className={clsx('text-blue-700')}
+              href="https://dinobytemedia.com"
+            >
+              Dinobyte Media
+            </a>
+            . Outside of work, I enjoy design, photography, playing the piano,
+            watching anime, and sometimes watching kdramas. 😁
           </p>
         </div>
-        <div className={clsx('flex flex-col mb-16 lg:col-start-2')}>
+        <div className={clsx('flex flex-col mb-16 lg:mb-0 lg:col-start-2')}>
           {socials.map((social) => {
             return (
               <Button
@@ -170,18 +177,18 @@ export default function Page() {
         </div>
       </Section>
       <Section className={clsx('relative lg:grid lg:grid-cols-2 lg:gap-x-16')}>
-        <div className={clsx('absolute w-max -top-24 right-0')}>
+        <div className={clsx('absolute w-max -top-24 right-0 lg:left-0')}>
           <Image
             className={clsx('w-auto')}
             src={YellowBlob}
-            width={110}
+            width="auto"
             height={96}
             alt=""
           />
           <Image
             className={clsx('absolute top-0 right-0')}
             src={Airplane}
-            width={110}
+            width="auto"
             height={78}
             alt=""
           />

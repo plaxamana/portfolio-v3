@@ -5,11 +5,19 @@ import PenIcon from '@/app/assets/pen-tool.svg';
 import PencilIcon from '@/app/assets/edit-3.svg';
 
 export const socials = [
-  { name: 'X', icon: <Twitter />, href: 'https://twitter.com/_plaxamana' },
-  { name: 'Github', icon: <Github />, href: 'https://github.com/plaxamana' },
+  {
+    name: 'X',
+    icon: <Twitter role="img" aria-hidden="true" />,
+    href: 'https://twitter.com/_plaxamana',
+  },
+  {
+    name: 'Github',
+    icon: <Github role="img" aria-hidden="true" />,
+    href: 'https://github.com/plaxamana',
+  },
   {
     name: 'Linkedin',
-    icon: <Linkedin />,
+    icon: <Linkedin role="img" aria-hidden="true" />,
     href: 'https://linkedin.com/in/plaxamana',
   },
 ];

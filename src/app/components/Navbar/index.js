@@ -55,6 +55,8 @@ export default function Navbar() {
           )}
         >
           <X
+            role="img"
+            aria-label="close"
             className="w-6 h-6 mb-6 ml-auto mr-6 text-white cursor-pointer"
             onClick={() => setIsNavOpen(!isNavOpen)}
           />

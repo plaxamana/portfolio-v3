@@ -12,7 +12,7 @@ export default function Card({ icon, skill, description, className }) {
       <Image
         className={clsx('absolute top-0 left-0 -mt-6 ml-4')}
         src={icon}
-        width={42}
+        width="auto"
         height={42}
         alt=""
       />

@@ -3,6 +3,7 @@ import clsx from 'clsx';
 export default function Container({ children, className }) {
   return (
     <div
+      role="main"
       className={clsx('px-6 sm:px-8 md:px-12 max-w-screen-xl mx-auto', {
         [className]: className,
       })}
