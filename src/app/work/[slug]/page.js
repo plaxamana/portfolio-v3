@@ -1,14 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { WORK_QUERY } from '@/sanity/lib/queries';
-import { sanityFetch } from '@/sanity/lib/client';
+import { WORKS_QUERY, WORK_QUERY } from '@/sanity/lib/queries';
+import { client, sanityFetch } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import { Section } from '@/app/components/Container';
 import PageTitle from '@/app/components/PageTitle';
 import Typography from '@/app/components/Typography';
 
 import { PortableText } from '@portabletext/react';
+
+export async function generateStaticParams() {
+  const posts = await client.fetch(
+    WORKS_QUERY,
+    {},
+    { perspective: 'published' },
+  );
+
+  return posts.map((post) => ({
+    slug: post?.slug?.current,
+  }));
+}
 
 export default async function Page({ params }) {
   const work = await sanityFetch({

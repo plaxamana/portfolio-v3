@@ -13,7 +13,7 @@ export default function WorkPiece({ title, desc, hrefSite, slug, img }) {
       )}
     >
       <div className={clsx('rounded-2xl shadow-lg overflow-hidden')}>
-        <a href="https://jfcm.ca">
+        <a href={hrefSite}>
           <Image
             src={urlFor(img?.asset?._ref).width(500).height(300).url()}
             sizes="100vw"
