@@ -8,7 +8,6 @@ import { WORKS_QUERY } from '@/sanity/lib/queries';
 
 export default async function Page() {
   const works = await sanityFetch({ query: WORKS_QUERY });
-  console.log({ works });
 
   return (
     <Section>

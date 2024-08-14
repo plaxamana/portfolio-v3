@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import { urlFor } from '@/sanity/lib/image';
 
 export default function WorkPiece({ title, desc, hrefSite, slug, img }) {
-  console.log({ img });
   return (
     <div
       className={clsx(

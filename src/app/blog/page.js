@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { Section } from '@/app/components/Container';
 import PageTitle from '@/app/components/PageTitle';
 import BlogPost from '@/app/components/BlogPost';
+import Typography from '../components/Typography';
 
 import { sanityFetch } from '@/sanity/lib/client';
 import { POSTS_QUERY } from '@/sanity/lib/queries';
@@ -19,14 +20,17 @@ export default async function Page() {
       />
 
       <Section className={clsx('flex flex-col gap-y-10 items-center')}>
-        {posts &&
+        {posts.length > 0 ? (
           posts.map((post) => (
             <BlogPost
               key={post._id}
               title={post.title}
               href={`blog/${post.slug.current}`}
             />
-          ))}
+          ))
+        ) : (
+          <Typography type="h2">Sorry, I have no posts currently :(</Typography>
+        )}
       </Section>
     </Section>
   );
