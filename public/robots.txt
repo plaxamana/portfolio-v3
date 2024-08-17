@@ -1,6 +1,6 @@
 # *
 User-agent: *
-Allow: /
+Allow: /api/og/*
 
 # Host
 Host: https://philiplaxamana.com

@@ -22,6 +22,22 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const work = await sanityFetch({
+    query: WORK_QUERY,
+    params,
+  });
+
+  const image = urlFor(work.project_image?.asset?._ref).url();
+
+  return {
+    title: `${work.name} | Philip Laxamana`,
+    openGraph: {
+      images: [`${image}`],
+    },
+  };
+}
+
 export default async function Page({ params }) {
   const work = await sanityFetch({
     query: WORK_QUERY,
