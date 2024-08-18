@@ -21,7 +21,7 @@ export const metadata = {
     template: '%s | Philip Laxamana',
     default: 'Home | Philip Laxamana',
   },
-  opengraph: {
+  openGraph: {
     images: [Thumbnail],
   },
   description:

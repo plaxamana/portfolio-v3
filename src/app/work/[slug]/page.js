@@ -28,12 +28,15 @@ export async function generateMetadata({ params }) {
     params,
   });
 
+  const host = process.env.SITE_URL || `localhost:3000`;
   const image = urlFor(work.project_image?.asset?._ref).url();
+  const imageUrl = `${host}/api/og?title=${work.name}&route=work`;
 
   return {
     title: `${work.name} | Philip Laxamana`,
     openGraph: {
-      images: [`${image}`],
+      description: `${work.short_description[0].children[0].text}`,
+      images: [`${imageUrl}`],
     },
   };
 }

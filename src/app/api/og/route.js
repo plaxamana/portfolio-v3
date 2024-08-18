@@ -6,58 +6,38 @@ export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
 
-    // ?title=<title>
-    const hasTitle = searchParams.has('title');
-    const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
-      : 'My default title';
+    const title =
+      searchParams.get('title')?.slice(0, 100) ??
+      'I create beautiful websites that make the internet look great!';
+
+    const route = searchParams.get('route') ?? '';
 
     return new ImageResponse(
       (
         <div
           style={{
-            backgroundColor: 'black',
-            backgroundSize: '150px 150px',
             height: '100%',
             width: '100%',
             display: 'flex',
-            textAlign: 'center',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            flexDirection: 'column',
-            flexWrap: 'nowrap',
+            backgroundColor: '#fff',
+            fontSize: 32,
+            fontWeight: 600,
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              justifyItems: 'center',
-            }}
+          <svg
+            width="75"
+            viewBox="0 0 75 65"
+            fill="#000"
+            style={{ margin: '0 75px' }}
           >
-            <img
-              alt="Vercel"
-              height={200}
-              src="data:image/svg+xml,%3Csvg width='116' height='100' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.5 0L115 100H0L57.5 0z' /%3E%3C/svg%3E"
-              style={{ margin: '0 30px' }}
-              width={232}
-            />
-          </div>
-          <div
-            style={{
-              fontSize: 60,
-              fontStyle: 'normal',
-              letterSpacing: '-0.025em',
-              color: 'white',
-              marginTop: 30,
-              padding: '0 120px',
-              lineHeight: 1.4,
-              whiteSpace: 'pre-wrap',
-            }}
-          >
-            {title}
-          </div>
+            <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
+          </svg>
+          <div style={{ marginTop: 40, marginBottom: 10 }}>{title}</div>
+          <div style={{ fontSize: 18, marginBottom: 10 }}>Philip Laxamana</div>
+          <div style={{ fontSize: 16 }}>{route}</div>
         </div>
       ),
       {
