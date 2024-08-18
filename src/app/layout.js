@@ -8,13 +8,13 @@ import clsx from 'clsx';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 
-import Thumbnail from '@/app/assets/thumbnail.png';
-
 const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
   ssr: false,
 });
 
 const inter = Inter({ subsets: ['latin'] });
+
+const imageUrl = `${process.env.SITE_URL}/api/og`;
 
 export const metadata = {
   title: {
@@ -22,7 +22,7 @@ export const metadata = {
     default: 'Home | Philip Laxamana',
   },
   openGraph: {
-    images: [Thumbnail],
+    images: [`${imageUrl}`],
   },
   description:
     'Philip Laxamana is a front-end software engineer with a love for building all things front-end and has a knack for design! :)',
