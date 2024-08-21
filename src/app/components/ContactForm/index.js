@@ -73,7 +73,7 @@ export default function ContactForm() {
         src="https://cdn.jsdelivr.net/npm/ahoy.js@0.3.9/dist/ahoy.min.js"
         async
         defer
-        onload={configureAhoy}
+        onLoad={configureAhoy}
       />
     </>
   );

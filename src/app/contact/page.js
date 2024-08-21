@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 import { Section } from '@/app/components/Container';
 import PageTitle from '@/app/components/PageTitle';
