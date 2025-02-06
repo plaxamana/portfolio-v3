@@ -18,6 +18,12 @@ export const blockContentType = defineType({
   type: 'array',
   of: [
     defineArrayMember({
+      type: 'code',
+      options: {
+        withFilename: true,
+      },
+    }),
+    defineArrayMember({
       type: 'block',
       // Styles let you define what blocks can be marked up as. The default
       // set corresponds with HTML tags, but you can set any title or value

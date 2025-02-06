@@ -1,27 +1,22 @@
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
-
+import CustomPortableText from "../CustomPortableText";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
+import {getImageDimensions} from '@sanity/asset-utils'
 
 export function Post({ post }) {
   const { title, mainImage, body } = post || {};
+  // const { width, height } = getImageDimensions(mainImage)
 
   return (
-    <main className="container p-4 mx-auto prose prose-lg">
-      {title ? <h1>{title}</h1> : null}
-      {mainImage?.asset?._ref ? (
-        <Image
-          className="float-left w-1/3 m-0 mr-4 rounded-lg"
-          src={urlFor(mainImage?.asset?._ref).width(300).height(300).url()}
-          width={300}
-          height={300}
-          alt={title || ""}
-        />
-      ) : null}
-      {body ? <PortableText value={body} /> : null}
-      <hr />
-      <Link href="/blog">&larr; Return to blog</Link>
+    <main className="mx-auto">
+      <div className="my-12 lg:max-w-3xl lg:mx-auto sm:my-20 lg:my-32">
+        <h1 className="text-4xl font-bold lg:text-5xl">{title}</h1>
+      </div>
+      <CustomPortableText value={body} />
+      <div className="my-20 lg:max-w-3xl lg:mx-auto">
+        <Link href="/blog" className="underline hover:text-blue-400">&larr; Return to blog</Link>
+      </div>
     </main>
   );
 }
