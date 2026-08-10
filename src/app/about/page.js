@@ -150,14 +150,7 @@ export default function Page() {
             with is node/express, MongoDB and SQL.
           </p>
           <p>
-            On the side, I am working on{' '}
-            <a
-              className={clsx('text-blue-700')}
-              href="https://dinobytemedia.com"
-            >
-              Dinobyte Media
-            </a>
-            . Outside of work, I enjoy design, photography, playing the piano,
+            Outside of work, I enjoy design, photography, playing the piano,
             watching anime, and sometimes watching kdramas. 😁
           </p>
         </div>

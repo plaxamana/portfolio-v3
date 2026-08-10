@@ -48,10 +48,16 @@ export const skillsArr = [
 
 export const experience = [
   {
+    title: 'Software Developer',
+    company: 'Priceline',
+    year: 'July 2026 - Present',
+    isCurrent: true,
+  },
+  {
     title: 'Software Engineer',
     company: 'Achievers',
-    year: 'Sept 2022 - Present',
-    isCurrent: true,
+    year: 'Sept 2022 - June 2026',
+    isCurrent: false,
   },
   {
     title: 'Software Developer Intern',
